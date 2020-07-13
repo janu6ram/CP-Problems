@@ -15,6 +15,22 @@ with them:
 Everything else has 0 points.
 Use the test cases below to guide you!"""
 
+
 class Classy(object):
     def __init__(self):
         self.items = []
+        self.score = 0
+
+    def addItem(self, item):
+        if item == "tophat":
+            self.score += 2
+        elif item == "bowtie":
+            self.score += 4
+        elif item == "monocle":
+            self.score += 5
+        else:
+            self.score += 0
+        self.items.append(item)
+
+    def classiness(self):
+        return self.score
