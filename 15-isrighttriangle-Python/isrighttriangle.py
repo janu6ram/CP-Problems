@@ -10,9 +10,12 @@ import math as m
 
 def isrighttriangle(x1, y1, x2, y2, x3, y3):
     # your code goes here
-    pass
+    side1 = distance(x1, y1, x2, y2)
+    side2 = distance(x2, y2, x3, y3)
+    side3 = distance(x3, y3, x1, y1)
 
 
 def distance(x1, y1, x2, y2):
     dist = (x1-x2) * (x1-x2) + (y1-y2) * (y1-y2)
     sqrt_dist = m.pow(dist, 0.5)
+    return sqrt_dist
