@@ -7,7 +7,7 @@ class distance {
 	public int fun_distance(int x1, int y1, int x2, int y2) {
 		// Your code goes here
 		int x = (x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1);
-		int y = (int) Math.pow(x, 2);
+		int y = (int) Math.pow(x, 0.5);
 		return y;
 	}
 }
