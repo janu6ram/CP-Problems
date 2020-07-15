@@ -48,10 +48,13 @@ def playstep2(hand, dice):
     else:
         high = max(arr)
         arr = [high, dice_list.pop(-1), dice_list.pop(-1)]
-    arr.sort()
-    s = ""
-    hand1 = s.join(arr)
-    print(hand1)
+    arr.sort(reverse=True)
+    s1 = ""
+    hand1 = s1.join(arr)
+    s2 = ""
+    dice2 = s2.join(dice_list)
+    # print(hand1)
+    return hand1
 
 
 playstep2(413, 2312)
