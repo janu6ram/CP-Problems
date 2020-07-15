@@ -12,5 +12,6 @@ import math
 def fun_find_int_roots(a, b, c):
     det = b**2 - 4 * a * c
     det_rt = math.sqrt(det)
-    roots = (int((-b + det_rt)//2*a), int((-b-det_rt)//2*a))
-    return sorted(roots)
+    roots = [int((-b + det_rt)//2*a), int((-b-det_rt)//2*a)]
+    roots.sort()
+    return tuple(roots)
