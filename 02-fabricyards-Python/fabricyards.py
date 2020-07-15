@@ -26,7 +26,7 @@ def fun_fabricexcess(inches):
     total = fun_fabricyards(inches)
     print("total", total)
     excess = (total * 36) - inches
-    return inches
+    return excess
 
 
 fun_fabricexcess(1)
