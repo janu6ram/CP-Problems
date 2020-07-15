@@ -11,7 +11,9 @@ import math as m
 def digitcount(n):
     # your code goes here
     num = abs(n)
-    return m.log(num, 10) + 1
+    num_log = m.log(num, 10) + 1
+    print(num_log)
+    return m.floor(num_log)
 
 
-print(digitcount(-5231123123123))
+print(digitcount(20))
