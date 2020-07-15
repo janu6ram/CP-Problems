@@ -10,10 +10,12 @@ import math as m
 
 def digitcount(n):
     # your code goes here
+    if n == 0:
+        return 1
     num = abs(n)
     num_log = m.log(num, 10) + 1
     print(num_log)
     return m.floor(num_log)
 
 
-print(digitcount(20))
+print(digitcount(100))
