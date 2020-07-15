@@ -30,5 +30,31 @@
 
 def playstep2(hand, dice):
     # your code goes here
-    arr = list(hand)
-    print(arr)
+    st = str(hand)
+    arr = list(st)
+    dice_st = str(dice)
+    dice_list = list(dice_st)
+    if (arr[0] == arr[1]) and (arr[1] == arr[2]):
+        return hand
+    elif arr[0] == arr[1]:
+        arr.pop(2)
+        arr.append(dice_list.pop(-1))
+    elif arr[1] == arr[2]:
+        arr.pop(0)
+        arr.append(dice_list.pop(-1))
+    elif arr[0] == arr[2]:
+        arr.pop(1)
+        arr.append(dice_list.pop(-1))
+    else:
+        high = max(arr)
+        arr = [high, dice_list.pop(-1), dice_list.pop(-1)]
+    arr.sort()
+    s = ""
+    hand1 = s.join(arr)
+    print(hand1)
+
+
+playstep2(413, 2312)
+playstep2(413, 2345)
+playstep2(544, 23)
+playstep2(544, 456)
