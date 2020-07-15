@@ -35,11 +35,11 @@ locations = {'North America': {'USA': ['Mountain View', 'Atlanta']},
 
 
 def sortUSA():
-    return locations['North America']['USA'].sort()
+    return sorted(locations['North America']['USA'])
 
 
 def alphaAsia():
-    india = locations['Asia']['India'] + str(" - ") + ('India')
-    china = locations['Asia']['China'] + str(" - ") + ('China')
+    india = locations['Asia']['India'][0] + str(" - ") + ('India')
+    china = locations['Asia']['China'][0] + str(" - ") + ('China')
     loc = [india, china]
     return loc.sort()
