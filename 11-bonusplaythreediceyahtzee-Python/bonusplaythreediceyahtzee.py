@@ -38,10 +38,30 @@
 # assert(bonusPlayThreeDiceYahtzee(2333413) == (333, 29))
 # assert(bonusPlayThreeDiceYahtzee(2333555) == (555, 35))
 
+from playstep2 import playstep2
+import collections
+
 
 def bonusplaythreediceyahtzee(dice):
     # Your code goes here
     dice_str = str(dice)
-    dice_list = list(dice_str)
-    dice = dice_list[:4]
-    hand = dice_list[4:]
+    dice1 = dice_str[:4]
+    hand1 = dice_str[4:]
+    result = playstep2(hand1, dice1)
+    result1 = playstep2(result[0], result[1])
+    main = result1[0]
+    main_str = str(result1[0])
+    main_list = list(main_str)
+    # if main_list[0] == main_list[1] and main_list[1] == main_list[2]:
+    #     return 20 + 3 * int(main_list[0])
+    repeat = [(item, count) for item, count in collections.Counter(
+        main_list).items() if count > 1]
+    if not repeat:
+        return (main, int(max(main_list)))
+    elif repeat[0][1] == 2:
+        return (main, 10 + 2 * int(repeat[0][0]))
+    elif repeat[0][1] == 3:
+        return (main, 20 + 3 * int(repeat[0][0]))
+
+
+print(bonusplaythreediceyahtzee(2633413))
