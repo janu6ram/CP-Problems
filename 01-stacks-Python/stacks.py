@@ -37,8 +37,7 @@ class LinkedList(object):
             return
         current = self.head
         self.head = self.head.next
-        current.next = None
-        print(head.value)
+        # print("head", self.head.value)
         return current
 
 

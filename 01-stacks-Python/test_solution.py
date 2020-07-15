@@ -1,9 +1,10 @@
 
-import os,sys
-sys.path.append(os.getcwd())
-from stacks import stack
-from stacks import Element  
 import pytest
+from stacks import Element
+from stacks import stack
+import os
+import sys
+sys.path.append(os.getcwd())
 
 e1 = Element(1)
 e2 = Element(2)
@@ -17,16 +18,19 @@ stack = stack(e1)
 stack.push(e2)
 stack.push(e3)
 
-@pytest.mark.parametrize("result",[(3),(2),(1)])
-def test_pop1(result):    
+
+@pytest.mark.parametrize("result", [(3), (2), (1)])
+def test_pop1(result):
+    print(result)
     assert stack.pop().value == result
 
-@pytest.mark.parametrize("result",[(None)])
-def test_pop2(result):    
+
+@pytest.mark.parametrize("result", [(None)])
+def test_pop2(result):
     assert stack.pop() == result
 
-@pytest.mark.parametrize("result",[(4)])
-def test_pop3(result):
-    stack.push(e4)    
-    assert stack.pop().value == result
 
+@pytest.mark.parametrize("result", [(4)])
+def test_pop3(result):
+    stack.push(e4)
+    assert stack.pop().value == result
