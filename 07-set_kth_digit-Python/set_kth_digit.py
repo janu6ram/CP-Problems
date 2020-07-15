@@ -6,8 +6,7 @@
 
 
 def fun_set_kth_digit(n, k, d):
-    np = abs(n)
-    st = str(np)
+    st = str(n)
     n_list = list(st)
     if k == len(n_list):
         n_list = [str(d)] + n_list
@@ -16,4 +15,7 @@ def fun_set_kth_digit(n, k, d):
     s = ""
     num = s.join(n_list)
     numInt = int(num)
-    return numInt
+    if n < 0:
+        return (-numInt)
+    else:
+        return numInt
