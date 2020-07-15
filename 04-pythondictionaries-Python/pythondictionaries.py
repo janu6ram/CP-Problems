@@ -42,4 +42,4 @@ def alphaAsia():
     india = locations['Asia']['India'][0] + str(" - ") + ('India')
     china = locations['Asia']['China'][0] + str(" - ") + ('China')
     loc = [india, china]
-    return loc.sort()
+    return sorted(loc)
