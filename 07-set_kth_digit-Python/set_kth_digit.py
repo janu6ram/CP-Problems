@@ -9,7 +9,7 @@ def fun_set_kth_digit(n, k, d):
     np = abs(n)
     st = str(np)
     n_list = list(st)
-    if k == len(n_list) + 1:
+    if k == len(n_list):
         n_list = [d+""] + n_list
     else:
         n_list[-1-k] = str(d)
