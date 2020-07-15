@@ -54,7 +54,7 @@ def playstep2(hand, dice):
     s2 = ""
     dice1 = s2.join(dice_list)
     # print(hand1)
-    return (hand1, dice1)
+    return (int(hand1), int(dice1))
 
 
 playstep2(413, 2312)
