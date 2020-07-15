@@ -52,9 +52,9 @@ def playstep2(hand, dice):
     s1 = ""
     hand1 = s1.join(arr)
     s2 = ""
-    dice2 = s2.join(dice_list)
+    dice1 = s2.join(dice_list)
     # print(hand1)
-    return hand1
+    return (hand1, dice1)
 
 
 playstep2(413, 2312)
