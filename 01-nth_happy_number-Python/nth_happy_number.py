@@ -14,4 +14,13 @@ from ishappynumber import ishappynumber
 
 
 def fun_nth_happy_number(n):
-    return 0
+    list = []
+    i = 1
+    while(len(list) != n+1):
+        if(ishappynumber(i)):
+            list.append(i)
+        i += 1
+    return list[n]
+
+
+print(fun_nth_happy_number(3))
