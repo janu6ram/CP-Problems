@@ -25,6 +25,7 @@ def fun_applycaesarcipher(msg, shift):
             data.append(str_upper[(str_upper.index(i)+shift) % 26])
     new_msg = "".join(data)
     print(new_msg)
+    return new_msg
 
 
 fun_applycaesarcipher("We Attack At Dawn", 1)
