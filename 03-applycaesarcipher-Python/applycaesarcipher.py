@@ -11,7 +11,10 @@
 
 
 def fun_applycaesarcipher(msg, shift):
-	for i in msg:
-		print(i)
-		if i ==" ":
-			continue
+    for i in msg:
+        print(i)
+        if i == " ":
+            continue
+
+
+fun_applycaesarcipher("We Attack At Dawn", 1)
