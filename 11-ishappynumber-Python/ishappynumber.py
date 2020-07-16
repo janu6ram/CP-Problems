@@ -18,7 +18,7 @@ def ishappynumber(n):
     # your code goes here
     if n == 1:
         return True
-    if n == 4:
+    if n == 4 or n <= 0:
         return False
     sum = 0
     while n != 0:
