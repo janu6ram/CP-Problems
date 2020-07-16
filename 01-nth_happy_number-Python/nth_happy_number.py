@@ -23,4 +23,4 @@ def fun_nth_happy_number(n):
     return list[n]
 
 
-print(fun_nth_happy_number(3))
+print(fun_nth_happy_number(7))
