@@ -10,13 +10,13 @@ def mostfrequentdigit(n):
     num_st = str(n)
     num_list = list(num_st)
     print(num_list)
+    print(collections.Counter(num_list).items())
     repeat = [(count, item)
-              for item, count in collections.Counter(num_list).items() if count > 1]
-    print(repeat)
+              for item, count in sorted(collections.Counter(num_list).most_common())]
     if not repeat:
         return int(num_list[0])
     else:
-        return int(repeat[0][0])
+        return int(repeat[0][1])
 
 
-print(mostfrequentdigit(1102300))
+print(mostfrequentdigit(5231123123123))
