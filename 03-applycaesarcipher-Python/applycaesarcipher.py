@@ -11,10 +11,11 @@
 
 
 def fun_applycaesarcipher(msg, shift):
-    for i in msg:
-        print(i)
-        if i == " ":
-            continue
+    str_lower = "abcdefghijklmnopqrstuvwxyz"
+    str_upper = str_lower.upper()
+    print(str_upper)
+# for i in msg:
+    # 	if i.strip() and i in
 
 
 fun_applycaesarcipher("We Attack At Dawn", 1)
