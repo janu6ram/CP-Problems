@@ -29,4 +29,4 @@ def ishappynumber(n):
     ishappynumber(sum)
 
 
-ishappynumber(97)
+ishappynumber(404)
