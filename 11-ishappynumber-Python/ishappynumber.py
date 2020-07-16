@@ -25,8 +25,8 @@ def ishappynumber(n):
         rem = n % 10
         sum = sum + rem**2
         n = n//10
-    print(sum)
-    ishappynumber(sum)
+    # print(sum)
+    return ishappynumber(sum)
 
 
-ishappynumber(404)
+print(ishappynumber(2))
