@@ -16,9 +16,11 @@ def fun_applycaesarcipher(msg, shift):
     data = []
     print(str_upper)
     for i in msg:
-        if i.strip() and i in str_lower:
+        if i == " ":
+            continue
+        if i in str_lower:
             data.append(str_lower[(str_lower.index(i)+shift) % 26])
-        elif i.strip() and i in str_upper:
+        elif i in str_upper:
             data.append(str_upper[(str_upper.index(i)+shift) % 26])
     new_msg = ""
     new_msg.join(data)
