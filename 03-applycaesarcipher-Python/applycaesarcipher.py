@@ -13,9 +13,13 @@
 def fun_applycaesarcipher(msg, shift):
     str_lower = "abcdefghijklmnopqrstuvwxyz"
     str_upper = str_lower.upper()
+    data = []
     print(str_upper)
-# for i in msg:
-    # 	if i.strip() and i in
+    for i in msg:
+        if i.strip() and i in str_lower:
+            data.append(str_lower[(str_lower.index(i)+shift) % 26])
+        elif i.strip() and i in str_upper:
+            data.append(str_upper[(str_upper.index(i)+shift) % 26])
 
 
 fun_applycaesarcipher("We Attack At Dawn", 1)
