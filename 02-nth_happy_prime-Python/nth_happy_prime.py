@@ -4,7 +4,13 @@
 
 
 def fun_nth_happy_prime(n):
-    return 0
+    list1 = []
+    i = 1
+    while len(list1) != (n+1):
+        if isPrimeNumber(i) and isHappyNumber(i):
+            list1.append(i)
+        i += 1
+    return list1[n]
 
 
 def isPrimeNumber(n):
@@ -19,6 +25,7 @@ def isPrimeNumber(n):
         if n % i == 0 or n % (i+2) == 0:
             return False
         i = i+6
+        print("i", i)
     return True
 
 
@@ -32,4 +39,8 @@ def isHappyNumber(n):
         rem = n % 10
         sum = sum + rem**2
         n = n//10
+    print(sum)
     return isHappyNumber(sum)
+
+
+print(fun_nth_happy_prime(0))
