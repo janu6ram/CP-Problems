@@ -11,13 +11,13 @@ def smallestdifference(a):
     a.sort()
     diff = 0
     least = sys.maxsize
-    print(a)
+    # print(a)
     for i in range(0, len(a)-1):
         diff = a[i+1] - a[i]
         if(diff) < least:
             least = diff
-            print(least)
-    print(least)
+            # print(least)
+    # print(least)
     return least
 
 
