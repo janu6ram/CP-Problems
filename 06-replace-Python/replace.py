@@ -17,11 +17,11 @@ def fun_replace(s1, s2, s3):
                 flag = True
         if(flag == True):
             j += 1
-            if j == l3:
+            if j == l2:
                 flag = False
                 j = 0
-            continue
-        s += s1[i]
+        else:
+            s += s1[i]
 
     print(s)
     return s
