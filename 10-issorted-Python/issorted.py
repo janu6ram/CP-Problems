@@ -14,11 +14,10 @@ def issorted(a):
             less += 1
         elif a[i] >= a[i+1]:
             more += 1
-            less
-    if less == len(a) or more == len(a):
+    if less >= len(a)-1 or more >= len(a)-1:
         return True
     else:
         return False
 
 
-print(issorted([10, 9, 8, 7, 6, 5, 4, 3, 2, 10]))
+print(issorted([10, 9, 8, 7, 6, 5, 4, 3, 2, 1]))
