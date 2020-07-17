@@ -6,3 +6,13 @@
 def removeduplicate(text):
     # Your code goes here
     dict1 = {}
+    s = ""
+    for i in text:
+        if i not in dict1:
+            dict1[i] = 1
+            s += i
+    print(s)
+    return s
+
+
+removeduplicate("a a ")
