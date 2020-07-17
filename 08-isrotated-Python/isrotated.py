@@ -10,6 +10,7 @@ def isrotated(str1, str2):
         if str1[i] == str2[0]:
             break
     s = str1[i:] + str1[:i]
+    print(s)
     if s == str2:
         return True
     else:
