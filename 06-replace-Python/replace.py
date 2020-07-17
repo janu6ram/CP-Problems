@@ -8,14 +8,23 @@ def fun_replace(s1, s2, s3):
     l2 = len(s2)
     l3 = len(s3)
     s = ""
+    j = 0
+    flag = False
     for i in range(len(s1)):
         if(s1[i] == s2[0]):
             if(s2 == s1[i:i+l2]):
-                s += s3 + s1[i+l2:]
-                break
+                s += s3
+                flag = True
+        if(flag == True):
+            j += 1
+            if j == l3:
+                flag = False
+                j = 0
+            continue
         s += s1[i]
+
     print(s)
     return s
 
 
-fun_replace("hellrldowo23ufn348hf oincodnrld123", "rld", "     ")
+fun_replace("helloworld123", "123", "345")
