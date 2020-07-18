@@ -18,8 +18,10 @@ def isrotation(x, y):
         first = x//large
         remove = x - first * large
         new = remove * 10 + first
+        print(new)
         if new == y:
             return True
+        x = new
     return False
 
 
@@ -29,3 +31,6 @@ def digit_count(n):
         count += 1
         n //= 10
     return count
+
+
+isrotation(3412, 1234)
