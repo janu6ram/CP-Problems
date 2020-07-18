@@ -10,6 +10,7 @@ def fun_nth_additive_prime(n):
     while len(primes) != n:
         if prime_number(i) and additive(i):
             primes.append(i)
+        i += 1
     return primes[n]
 
 
