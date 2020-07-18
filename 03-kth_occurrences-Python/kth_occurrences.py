@@ -15,4 +15,4 @@ def fun_kth_occurrences(s, n):
                 return i
         else:
             dict1[i] = 1
-    return s.strip()
+    return s.strip()[0]
