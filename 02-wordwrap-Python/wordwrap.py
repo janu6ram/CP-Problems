@@ -22,9 +22,9 @@ def fun_wordwrap(s, n):
     s.strip()
     for i in s:
         if count == n:
-            new += "/n"
+            new += "\n"
             count = 0
-        if i == "":
+        if i == " ":
             i = "-"
         new += i
         count += 1
