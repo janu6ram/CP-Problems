@@ -41,7 +41,7 @@ class LinkedList(object):
         count = 1
         while current.next != None:
             count += 1
-            cuurent = current.next
+            current = current.next
             print(current.value, count)
             if count == position:
                 return current
