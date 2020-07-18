@@ -29,6 +29,7 @@ class BinaryTree(object):
         # Your code goes here
         if start == None or type(find_val) != int:
             return False
+        print("find", find_val, start.value)
         if start.value == find_val:
             return True
         if start.value < find_val:
