@@ -25,6 +25,7 @@ def partition(arr, low, high):
         if arr[j] < arr[pivot]:
             i += 1
             swap(arr, i, j)
+            print("inloop", arr)
     swap(arr, i+1, pivot)
     print(arr)
     return i+1
