@@ -75,16 +75,20 @@ class LinkedList(object):
         # Your code goes here
         if self.head == None:
             return
+        print("1")
         if self.head.value == value:
             if self.head.next == None:
                 self.head = None
                 return
             self.head = self.head.next
             return
+        print("2")
         current = self.head
         while current.next != None:
             if current.next.value == value:
-                current = current.next
+                current.next = current.next.next
+            current = current.next
+        print("3")
         return
 
     def printLList(self):
@@ -107,5 +111,7 @@ ll.printLList()
 print("pos of 3", ll.get_position(3).value)
 ll.delete(1)
 print(ll.get_position(1).value)
+ll.delete(1)
 print(ll.get_position(2).value)
+ll.delete(1)
 print(ll.get_position(3).value)
