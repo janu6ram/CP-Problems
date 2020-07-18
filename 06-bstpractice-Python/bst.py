@@ -11,16 +11,16 @@ class BST(object):
 
     def insert(self, new_val):
         # Your code goes here
-        self.insert(self.root, new_val)
+        self.insert_new(self.root, new_val)
 
-    def insert(self, start, new_value):
+    def insert_new(self, start, new_value):
         if start == None:
             start.value = new_value
             return
         if start.value < new_value:
-            insert(start.right, new_value)
+            self.insert_new(start.right, new_value)
         else:
-            insert(start.left, new_value)
+            self.insert_new(start.left, new_value)
 
     def printSelf(self):
         # Your code goes here
