@@ -42,7 +42,7 @@ class LinkedList(object):
         while current.next != None:
             count += 1
             current = current.next
-            print(current.value, count)
+            # print(current.value, count)
             if count == position:
                 return current
         return None
@@ -100,7 +100,11 @@ e3 = Element(3)
 ll = LinkedList(e1)
 ll.append(e2)
 ll.append(e3)
+e4 = Element(4)
+ll.insert(e4, 3)
 ll.printLList()
 print("pos of 3", ll.get_position(3).value)
 ll.delete(1)
-ll.printLList()
+print(ll.get_position(1).value)
+print(ll.get_position(2).value)
+print(ll.get_position(3).value)
