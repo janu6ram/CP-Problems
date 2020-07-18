@@ -19,7 +19,7 @@
 def fun_wordwrap(s, n):
     count = 0
     new = ""
-    s.strip()
+    s = s.strip()
     print(s)
     for i in s:
         if count == n:
