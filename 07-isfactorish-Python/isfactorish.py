@@ -12,14 +12,19 @@
 
 
 def fun_isfactorish(n):
+    n = abs(n)
     st = str(n)
     st_list = list(st)
+    print(st_list)
     if len(st_list) != 3 or len(st_list) != len(set(st_list)):
         return False
     if "0" in st_list:
         return False
-    n = abs(n)
+    print(n)
     for i in st_list:
         if n % int(i) != 0:
             return False
     return True
+
+
+fun_isfactorish(-412)
