@@ -27,7 +27,7 @@ class BinaryTree(object):
         """Helper method - use this to create a
         recursive search solution."""
         # Your code goes here
-        if start == None or find_val == None:
+        if start == None or type(find_val) != int:
             return False
         if start.value == find_val:
             return True
