@@ -19,7 +19,7 @@ tree.root.left = Node(2)
 tree.root.right = Node(3)
 tree.root.left.left = Node(4)
 tree.root.left.right = Node(5)
-tree.print_tree()
+# tree.print_tree()
 
 
 @pytest.mark.parametrize('check,result', [
