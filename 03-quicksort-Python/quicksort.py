@@ -20,9 +20,8 @@ def quickSort(arr, low, high):
 
 def partition(arr, low, high):
     i = low - 1
-    j = low
     pivot = high
-    for i in range(j, high-1):
+    for j in range(low, high-1):
         if arr[j] < arr[pivot]:
             i += 1
             swap(arr, i, j)
