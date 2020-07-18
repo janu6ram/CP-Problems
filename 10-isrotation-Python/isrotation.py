@@ -7,4 +7,23 @@
 
 def isrotation(x, y):
     # Your code goes here
-    st = str(x)
+    if digit_count(x) != digit_count(y):
+        return False
+    num = digit_count(x)
+    large = pow(10, num-1)
+
+    for i in range(num-1):
+        first = x//large
+        remove = x - first * large
+        new = remove * 10 + first
+        if new == y:
+            return True
+    return False
+
+
+def digit_count(n):
+    count = 0
+    while n != 0:
+        count += 1
+        n //= 10
+    return count
