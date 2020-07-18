@@ -24,7 +24,14 @@ class BST(object):
 
     def printSelf(self):
         # Your code goes here
-        pass
+        printSelf(self.root)
+
+    def printSelf(self, start):
+        if start == None:
+            return
+        self.printSelf(start.left)
+        print(start.value),
+        self.printSelf(start.right)
 
     def search(self, find_val):
         # Your code goes here
