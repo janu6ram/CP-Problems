@@ -21,7 +21,23 @@ def pallindrome(n):
         rem = temp % 10
         temp = temp//10
         rev = rev * 10 + rem
-    print(rev)
+    if rev == n:
+        return True
+    else:
+        return False
 
 
-pallindrome(786)
+def prime_number(n):
+    if n <= 1:
+        return False
+    if n == 2 or n == 3:
+        return True
+    if n % 2 == 0 or n % 3 == 0:
+        return False
+    i = 5
+    while i*i <= n:
+        if n % i == 0 or n % (i+2) == 0:
+            return False
+        i = i + 6
+    return True
+# pallindrome(786)
