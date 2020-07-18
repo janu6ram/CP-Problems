@@ -11,7 +11,7 @@ class BST(object):
 
     def insert(self, new_val):
         # Your code goes here
-        insert(self.root, new_val)
+        self.insert(self.root, new_val)
 
     def insert(self, start, new_value):
         if start == None:
