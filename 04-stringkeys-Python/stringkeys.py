@@ -21,7 +21,7 @@ class HashTable(object):
         Return -1 otherwise."""
         # Your code goes here
         if string in self.table:
-            return hash_value
+            return self.calculate_hash_value(string)
         else:
             return -1
 
