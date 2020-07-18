@@ -18,3 +18,14 @@
 
 def fun_wordwrap(s, n):
     count = 0
+    new = ""
+    s.strip()
+    for i in s:
+        if count == n:
+            new += "/n"
+            count = 0
+        if i == "":
+            i = "-"
+        new += i
+        count += 1
+    return new
