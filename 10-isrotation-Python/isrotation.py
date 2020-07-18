@@ -33,4 +33,4 @@ def digit_count(n):
     return count
 
 
-isrotation(3412, 1234)
+isrotation(12345, 54321)
