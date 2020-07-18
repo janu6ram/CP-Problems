@@ -12,3 +12,16 @@ def fun_nth_palindromic_prime(n):
             primes.append(i)
         i += 1
     return primes[n]
+
+
+def pallindrome(n):
+    temp = n
+    rev = 0
+    while temp != 0:
+        rem = temp % 10
+        temp = temp//10
+        rev = rev * 10 + rem
+    print(rev)
+
+
+pallindrome(786)
