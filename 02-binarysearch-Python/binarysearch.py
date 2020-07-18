@@ -15,12 +15,12 @@ def binary_search(input_array, value):
     # Your code goes here
     low = 0
     high = len(input_array)
-    while low < high:
+    while low <= high:
         mid = low + (high-low)//2
-        if value > input_array[mid]:
-            low = mid
-        elif value < input_array[mid]:
-            high = mid
-        else:
+        if input_array[mid] == value:
             return mid
+        if value > input_array[mid]:
+            low = mid + 1
+        else:
+            high = mid - 1
     return -1
