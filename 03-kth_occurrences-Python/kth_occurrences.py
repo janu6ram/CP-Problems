@@ -19,7 +19,7 @@ def fun_kth_occurrences(s, n):
     #         dict1[i] = 1
     # return s.strip()[0]
     frequent = [item for item in collections.Counter(s).most_common()]
-    print(frequent)
+    return frequent[n-1][0]
 
 
 fun_kth_occurrences("hsdibdouvbeiovbfeibvdsioubidsbvviefadbcildfab", 4)
