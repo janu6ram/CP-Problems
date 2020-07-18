@@ -15,12 +15,13 @@ class BST(object):
 
     def insert_new(self, start, new_value):
         if start == None:
-            start.value = new_value
-            return
+            return Node(new_value)
         if start.value < new_value:
-            self.insert_new(start.right, new_value)
+            start.right = self.insert_new(start.right, new_value)
+            return
         else:
-            self.insert_new(start.left, new_value)
+            start.left = self.insert_new(start.left, new_value)
+            return
 
     def printSelf(self):
         # Your code goes here
