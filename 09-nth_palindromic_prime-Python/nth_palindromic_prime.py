@@ -6,3 +6,9 @@
 
 def fun_nth_palindromic_prime(n):
     primes = []
+    i = 2
+    while len(primes) != n+1:
+        if pallindrome(i) and prime_number(i):
+            primes.append(i)
+        i += 1
+    return primes[n]
