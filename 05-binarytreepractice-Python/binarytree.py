@@ -21,7 +21,7 @@ class BinaryTree(object):
         as they are visited in
         a pre-order traversal."""
         # Your code goes here
-        pass
+        return self.preorder_print(self.root)
 
     def preorder_search(self, start, find_val):
         """Helper method - use this to create a
@@ -32,13 +32,16 @@ class BinaryTree(object):
         print("find", find_val, start.value)
         if start.value == find_val:
             return True
-        if start.value < find_val:
-            return self.preorder_search(start.right, find_val)
-        else:
+        if start.value > find_val:
             return self.preorder_search(start.left, find_val)
+        else:
+            return self.preorder_search(start.right, find_val)
 
-    def preorder_print(self, start, traversal):
+    def preorder_print(self, start):
         """Helper method - use this to create a
         recursive print solution."""
         # Your code goes here
-        pass
+        if start:
+            print(start.value),
+            self.preorder_print(start.left)
+            self.preorder_print(start.right)
