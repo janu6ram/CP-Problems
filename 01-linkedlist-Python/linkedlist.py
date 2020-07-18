@@ -85,6 +85,7 @@ class LinkedList(object):
         while current.next != None:
             if current.next.value == value:
                 current = current.next
+        return
 
     def printLList(self):
         temp = self.head
