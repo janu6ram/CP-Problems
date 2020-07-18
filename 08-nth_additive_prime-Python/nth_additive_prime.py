@@ -7,10 +7,11 @@
 def fun_nth_additive_prime(n):
     primes = []
     i = 2
-    while len(primes) != n:
+    while len(primes) != n+1:
         if prime_number(i) and additive(i):
             primes.append(i)
         i += 1
+    print(primes)
     return primes[n]
 
 
@@ -22,7 +23,7 @@ def prime_number(n):
     if n % 2 == 0 or n % 3 == 0:
         return False
     i = 5
-    while i * i < n:
+    while i * i <= n:
         if n % i == 0 or n % (i+2) == 0:
             return False
         i = i + 6
@@ -39,3 +40,6 @@ def additive(n):
         return True
     else:
         return False
+
+
+fun_nth_additive_prime(8)
