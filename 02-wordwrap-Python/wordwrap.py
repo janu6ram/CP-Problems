@@ -20,6 +20,7 @@ def fun_wordwrap(s, n):
     count = 0
     new = ""
     s.strip()
+    print(s)
     for i in s:
         if count == n:
             new += "\n"
@@ -29,3 +30,6 @@ def fun_wordwrap(s, n):
         new += i
         count += 1
     return new
+
+
+fun_wordwrap(" a b c de fgh ",  4)
