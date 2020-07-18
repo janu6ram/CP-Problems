@@ -21,7 +21,7 @@ def quickSort(arr, low, high):
 def partition(arr, low, high):
     i = low - 1
     pivot = high
-    for j in range(low, high-1):
+    for j in range(low, high):
         if arr[j] < arr[pivot]:
             i += 1
             swap(arr, i, j)
@@ -37,4 +37,4 @@ def swap(arr, i, j):
     arr[j] = temp
 
 
-print("last", quicksort([5, 4, 8, 3, 7]))
+print("last", quicksort([1, 2, 3, 4, 5]))
