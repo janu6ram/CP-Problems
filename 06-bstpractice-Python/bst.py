@@ -35,14 +35,14 @@ class BST(object):
 
     def search(self, find_val):
         # Your code goes here
-        search(self.root, find_val)
+        return search_new(self.root, find_val)
 
-    def search(self, start, find_val):
+    def search_new(self, start, find_val):
         if start == None or type(start.value) != type(find_val):
             return False
         if start.value == find_val:
             return True
         if start.value < find_val:
-            return self.search(start.right, find_val)
+            return self.search_new(start.right, find_val)
         else:
-            return self.search(start.left, find_val)
+            return self.search_new(start.left, find_val)
