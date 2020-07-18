@@ -5,7 +5,19 @@
 # If g, the users input/guess, is less than/greater than the midpoint of the range, then that number becomes the new high point of said range and is then factored into the new search.
 
 def findzerowithbisection(x, epsilon):
-	# epsilon and step are initialized
-	# don't change these values
-	# epsilon
-	# your code starts here
+    # epsilon and step are initialized
+    # don't change these values
+    # epsilon
+    # your code starts here
+    lower = 0
+    upper = x
+    while True:
+        mid = lower + (upper-lower)/2
+        diff = mid ** 2 - x
+        if abs(diff) <= epsilon:
+            break
+        if diff < 0:
+            lower = mid
+        else:
+            upper = mid
+    return mid
