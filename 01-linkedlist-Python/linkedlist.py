@@ -75,20 +75,20 @@ class LinkedList(object):
         # Your code goes here
         if self.head == None:
             return
-        print("1")
+        # print("1")
         if self.head.value == value:
             if self.head.next == None:
                 self.head = None
                 return
             self.head = self.head.next
             return
-        print("2")
+        # print("2")
         current = self.head
         while current.next != None:
             if current.next.value == value:
                 current.next = current.next.next
             current = current.next
-        print("3")
+        # print("3")
         return
 
     def printLList(self):
