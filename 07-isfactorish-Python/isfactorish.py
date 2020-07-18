@@ -18,6 +18,7 @@ def fun_isfactorish(n):
         return False
     if "0" in st_list:
         return False
+    n = abs(n)
     for i in st_list:
         if n % int(i) != 0:
             return False
