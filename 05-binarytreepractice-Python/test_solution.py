@@ -11,7 +11,7 @@ tree = BinaryTree(1)
     (tree.search(4), False), (tree.search(6), False)
 ])
 def test_classiness1(check, result):
-    print("test", tree.search(4))
+    # print("test", tree.search(4))
     assert check == result
 
 
@@ -26,7 +26,7 @@ tree.print_tree()
     (tree.search(4), True), (tree.search(6), False),
 ])
 def test_classiness2(check, result):
-    print("test", tree.search(4))
+    # print("test", tree.search(4))
     assert check == result
 
 
