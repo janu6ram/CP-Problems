@@ -21,7 +21,7 @@ class BinaryTree(object):
         as they are visited in
         a pre-order traversal."""
         # Your code goes here
-        return self.preorder_print(self.root)
+        self.preorder_print(self.root)
 
     def preorder_search(self, start, find_val):
         """Helper method - use this to create a
@@ -29,7 +29,7 @@ class BinaryTree(object):
         # Your code goes here
         if start == None or type(find_val) != int:
             return False
-        print("find", find_val, start.value)
+        # print("find", find_val, start.value)
         if start.value == find_val:
             return True
         if start.value > find_val:
