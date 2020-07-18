@@ -7,12 +7,14 @@
 
 def isrotation(x, y):
     # Your code goes here
+    if x == y:
+        return True
     if digit_count(x) != digit_count(y):
         return False
     num = digit_count(x)
     large = pow(10, num-1)
 
-    for i in range(num-1):
+    for i in range(num):
         first = x//large
         remove = x - first * large
         new = remove * 10 + first
