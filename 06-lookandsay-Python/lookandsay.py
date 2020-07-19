@@ -13,6 +13,8 @@ def lookandsay(a):
         return a
     list1 = []
     count = 1
+    if len(a) == 1:
+        return list1.append((count, a[0]))
     for i in range(len(a)-1):
         if a[i] == a[i+1]:
             count += 1
@@ -20,7 +22,7 @@ def lookandsay(a):
         list1.append((count, a[i]))
         count = 1
     list1.append((count, a[i+1]))
-    print(list1)
+    return list1
 
 
 lookandsay([1, 1, 1, 2, 2, 1, 1, 3])
