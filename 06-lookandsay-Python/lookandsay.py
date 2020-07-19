@@ -9,14 +9,18 @@
 
 def lookandsay(a):
     # Your code goes here
-    dict1 = {}
-    for i in a:
-        if i in dict1:
-            dict1[i] += 1
-        else:
-            dict1[i] = 1
-    print(dict1.items)
-    return dict1.items
+    if len(a) == 0:
+        return a
+    list1 = []
+    count = 1
+    for i in range(len(a)-1):
+        if a[i] == a[i+1]:
+            count += 1
+            continue
+        list1.append((count, a[i]))
+        count = 1
+    list1.append((count, a[i+1]))
+    print(list1)
 
 
-lookandsay([1, 1, 1, 2, 3, 1, 2, 3])
+lookandsay([1, 1, 1, 2, 2, 1, 1, 3])
