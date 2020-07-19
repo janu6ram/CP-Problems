@@ -11,3 +11,7 @@
 def inverselookandsay(a):
     # Your code goes here
     list1 = []
+    for i in a:
+        if i:
+            list1 += [i[1]]*i[0]
+    return list1
