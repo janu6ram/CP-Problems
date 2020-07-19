@@ -10,15 +10,18 @@ def multipolynomials(p1, p2):
     list1 = []
     pos = 0
     ind = 0
-    for i in p2:
+    for p in range(len(p2)):
+        pos = p
+        i = p2[p]
         for j in p1:
             if len(list1) > pos:
                 list1[pos] = list1[pos] + i*j
             else:
                 list1.append(i*j)
             pos += 1
-        pos = p2.index(i)
+        print(list1)
     print(list1)
+    return list1
 
 
-multipolynomials([2, 0, 3], [4, 5])
+multipolynomials([1, 1], [1, 1])
