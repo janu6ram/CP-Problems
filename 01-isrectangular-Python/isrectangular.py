@@ -9,3 +9,6 @@ def fun_isrectangular(l):
         if len(i) != t or len(i) == len(l):
             return False
     return True
+
+
+print(fun_isrectangular([[1, 2, 3], [2, 3, 4], [3, 4, 5]]))
