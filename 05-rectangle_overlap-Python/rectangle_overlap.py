@@ -1,13 +1,19 @@
 # rectanglesOverlap(left1, top1, width1, height1, left2, top2, width2, height2)
-# A rectangle can be described by its left, top, width, and height. This function 
-# takes two rectangles described this way, and returns True if the rectangles 
-# overlap at all (even if just at a point), and False otherwise. 
-# Note: here we will represent coordinates the way they are usually represented in 
-# computer graphics, where (0,0) is at the left-top corner of the screen, and while 
-# the x-coordinate goes up while you head right, the y-coordinate goes up while you 
+# A rectangle can be described by its left, top, width, and height. This function
+# takes two rectangles described this way, and returns True if the rectangles
+# overlap at all (even if just at a point), and False otherwise.
+# Note: here we will represent coordinates the way they are usually represented in
+# computer graphics, where (0,0) is at the left-top corner of the screen, and while
+# the x-coordinate goes up while you head right, the y-coordinate goes up while you
 # head down (so we say that "up is down")
 
 def fun_rectangle_overlap(left1, top1, width1, height1, left2, top2, width2, height2):
+    # if lef1< left2 and lef1 + width1 >= lef2 and top1 < top2 and top1 + height1 > top2
+    if left1 + width1 < left2 or left2 + width2 < left1:
+        return False
+    if top1 + height1 < top2 or top2+height2 < top1:
+        return False
     return True
 
-        
+
+print(fun_rectangle_overlap(0, 2, 2, 4, 1, 3, 8, 4))
