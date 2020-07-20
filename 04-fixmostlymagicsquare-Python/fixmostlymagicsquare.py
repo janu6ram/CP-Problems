@@ -8,20 +8,42 @@
 
 def fixmostlymagicsquare(L):
     # Your code goes here
-    which_row(L)
-    # col,diff = which_col(L)
+    row, diff = which_row(L)
+    print(row)
+    print(diff)
+    col, diff = which_col(L)
+    print(col)
+    print(diff)
+    L[row][col] += diff
+    return L
 
 
 def which_row(L):
     rows = []
     for i in L:
-        sum = 0
+        add = 0
         for j in i:
-            sum += j
-        if sum in rows:
-            correct = sum
-        rows.append(sum)
-    print(rows)
+            add += j
+        if add in rows:
+            correct = add
+        rows.append(add)
+    for i in range(len(rows)):
+        if rows[i] != correct:
+            return i, correct-rows[i]
+
+
+def which_col(L):
+    cols = []
+    for i in range(len(L)):
+        add = 0
+        for j in range(len(L)):
+            add += L[j][i]
+        if add in cols:
+            correct = add
+        cols.append(add)
+    for i in range(len(cols)):
+        if cols[i] != correct:
+            return i, correct-cols[i]
 
 
 fixmostlymagicsquare([[2, 7, 9], [9, 5, 1], [4, 3, 8]])
