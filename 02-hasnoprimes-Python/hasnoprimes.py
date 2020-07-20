@@ -5,9 +5,9 @@
 def fun_hasnoprimes(l):
     for i in l:
         for j in i:
-            if not is_prime(j):
-                return True
-    return False
+            if is_prime(j):
+                return False
+    return True
 
 
 def is_prime(n):
@@ -23,3 +23,6 @@ def is_prime(n):
             return False
         i += 6
     return True
+
+
+print(fun_hasnoprimes([[9, 12], [8], [16, 8, 19]]))
