@@ -7,9 +7,12 @@
 def fun_recursions_alternatingsum(l):
     if len(l) == 0:
         return 0
-    num = l.pop()
+    num = l.pop(0)
+    # print(num)
     k = -1
-    return k * (-num + fun_recursions_alternatingsum(l))
+    ret = k * ((k * num) + fun_recursions_alternatingsum(l))
+    # print(ret)
+    return ret
 
 
-print(fun_recursions_alternatingsum([1, 2, 3, 4, 5]))
+print(fun_recursions_alternatingsum([5, 3, 8, 4]))
