@@ -5,3 +5,8 @@
 
 def recursion_powersof3ton(n):
     # Your code goes here
+    if n == 0:
+        return []
+    qut = n//3
+    x = int(math.pow(qut, 1/3))
+    return recursion_powersof3ton(qut) + [3**x]
