@@ -9,11 +9,12 @@ def recursion_powersof3ton(n):
     # Your code goes here
     if n < 1:
         return None
-    if n == 1:
-        return [1]
     qut = n//3
     x = int(math.pow(3*qut, 1/3))
+    print(qut, x)
+    if qut == 0:
+        return [1]
     return recursion_powersof3ton(qut) + [3**x]
 
 
-print(recursion_powersof3ton(100))
+print(recursion_powersof3ton(8.9999))
