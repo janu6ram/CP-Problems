@@ -14,7 +14,7 @@ def fun_recursion_onlyevendigits(l):
     num = l.pop(0)
     even = only_even(num)
     print(even)
-    return [num] + fun_recursion_onlyevendigits(l)
+    return [even] + fun_recursion_onlyevendigits(l)
 
 
 def only_even(num):
@@ -27,4 +27,4 @@ def only_even(num):
     return only_even(num) * 10 + rem
 
 
-fun_recursion_onlyevendigits([43, 23265, 17, 58344])
+print(fun_recursion_onlyevendigits([43, 23265, 17, 58344]))
