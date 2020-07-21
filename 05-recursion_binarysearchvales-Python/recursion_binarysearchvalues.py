@@ -25,8 +25,8 @@ def recursion_binarysearchvalues(L, v):
     high = len(L)-1
     if type(L[-1]) == int:
         high = L[-1]
-    L.pop(-1)
-    L.pop(-1)
+        L.pop(-1)
+        L.pop(-1)
     print(L)
     if low > high:
         return []
@@ -39,12 +39,8 @@ def recursion_binarysearchvalues(L, v):
         low = mid+1
     else:
         high = mid-1
-    if type(L[-1]) == int:
-        L[-1] = high
-        L[-2] = low
-    else:
-        L.append(low)
-        L.append(high)
+    L.append(low)
+    L.append(high)
     return arr + recursion_binarysearchvalues(L, v)
 
 
