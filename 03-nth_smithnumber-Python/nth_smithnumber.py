@@ -58,7 +58,9 @@ def digit_sum(n):
         rem = n % 10
         n //= 10
         add += rem
+    if add > 9:
+        add = digit_sum(add)
     return add
 
 
-print(fun_nth_smithnumber(0))
+print(fun_nth_smithnumber(7))
