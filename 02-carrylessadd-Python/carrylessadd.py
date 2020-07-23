@@ -8,3 +8,19 @@
 def fun_carrylessadd(x, y):
     if x < 0 or y < 0:
         return None
+    add = 0
+    p = 0
+    while x != 0:
+        rem = x % 10
+        x //= 10
+        rem2 = y % 10
+        y //= 10
+        r = rem + rem2
+        r = r % 10
+        add += r * (10**p)
+        p += 1
+    print(add)
+    return add
+
+
+fun_carrylessadd(33, 77)
