@@ -16,4 +16,4 @@ def fun_numberofpoolballrows(balls):
     print(rows)
 
 
-fun_numberofpoolballrows(7)
+fun_numberofpoolballrows(6)
