@@ -38,17 +38,15 @@ def prime_number(n):
 def factors_sum(n):
     i = 2
     add = 0
-    while i < n:
+    while n > 1:
         if prime_number(i) and n % i == 0:
-            z = n
-            while z > 1:
-                if z % i == 0:
-                    add += i
-                    z = z/i
-                else:
-                    break
-        i += 1
-    add = digit_sum(add)
+            n = n/i
+            if i > 9:
+                add += digit_sum(i)
+            else:
+                add += i
+        else:
+            i += 1
     return add
 
 
@@ -58,8 +56,8 @@ def digit_sum(n):
         rem = n % 10
         n //= 10
         add += rem
-    if add > 9:
-        add = digit_sum(add)
+    # if add > 9:
+    #     add = digit_sum(add)
     return add
 
 
