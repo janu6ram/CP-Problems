@@ -58,4 +58,4 @@ def digit_sum(n):
     return add
 
 
-print(fun_nth_smithnumber(0))
+print(fun_nth_smithnumber(1))
