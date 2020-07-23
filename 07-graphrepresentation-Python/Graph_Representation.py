@@ -44,20 +44,36 @@ class Graph(object):
         for edge in self.edges:
             edge_list.append(
                 (edge.value, edge.node_from.value, edge.node_to.value))
+            print(edge.value, edge.node_from.value, edge.node_to.value)
         return edge_list
 
     def get_adjacency_list(self):
+        max_index = len(self.nodes)
         adjacency_list = [None] * (max_index + 1)
+        for edge in self.edges:
+            if adjacency_list[edge.node_from.value]:
+                adjacency_list[edge.node_from.value].append(
+                    (edge.node_to.value, edge.value))
+            else:
+                adjacency_list[edge.node_from.value] = [
+                    (edge.node_to.value, edge.value)]
+        print(adjacency_list)
         return adjacency_list
 
     def get_adjacency_matrix(self):
+        max_index = len(self.nodes)
         adjacency_matrix = [
             [0 for i in range(max_index + 1)] for j in range(max_index + 1)]
+        for edge in self.edges:
+            adjacency_matrix[edge.node_from.value][edge.node_to.value] = edge.value
         return adjacency_matrix
 
 
-g = Graph()
-g.insert_edge(10, 1, 2)
-g.insert_edge(20, 2, 3)
-
-print(g.get_edge_list)
+# g = Graph()
+# g.insert_edge(100, 1, 2)
+# g.insert_edge(101, 1, 3)
+# g.insert_edge(102, 1, 4)
+# g.insert_edge(103, 3, 4)
+# print(g.get_edge_list())
+# g.get_adjacency_list()
+# print(g.get_adjacency_matrix())
