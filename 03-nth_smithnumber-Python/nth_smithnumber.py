@@ -11,7 +11,7 @@
 def fun_nth_smithnumber(n):
     smith_numbers = []
     while len(smith_numbers) != n+1:
-        i = 1
+        i = 4
         if (not prime_number(i)) and factors_sum(i) == i:
             smith_numbers.append(i)
         i += 1
@@ -31,3 +31,12 @@ def prime_number(n):
             return False
         i += 6
     return True
+
+
+def factors_sum(n):
+    i = 1
+    add = 0
+    while i < n:
+        if prime_number(i) and n % i == 0:
+            add += i
+    return add
