@@ -18,4 +18,4 @@ def fun_numberofpoolballrows(balls):
     return math.ceil(rows)
 
 
-fun_numberofpoolballrows(0)
+print(fun_numberofpoolballrows(0))
