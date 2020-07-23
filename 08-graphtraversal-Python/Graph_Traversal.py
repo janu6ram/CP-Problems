@@ -179,7 +179,26 @@ class Graph(object):
         ARGUMENTS: start_node_num is the node number (integer)
         MODIFIES: the value of the visited property of nodes in self.nodes
         RETURN: a list of the node values (integers)."""
-        pass
+        self._clear_visited()
+        arr = [start_node_num]
+        node = self.find_node(start_node_num)
+        final = []
+        node.visited = True
+        while len(arr) != 0:
+            num = arr.pop()
+            final.append(num)
+            x = self.get_adjacency_list[num]
+            if x == None:
+                continue
+            for edge in x:
+                num = egde[0]
+                node = self.find_node(num)
+                if not node.visited:
+                    node.visited = True
+                    arr.append(num)
+        print("arr", arr)
+        print("final", final)
+        return final
 
     def bfs_names(self, start_node_num):
         """Return the results of bfs with numbers converted to names."""
