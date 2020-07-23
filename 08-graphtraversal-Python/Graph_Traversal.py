@@ -185,13 +185,15 @@ class Graph(object):
         final = []
         node.visited = True
         while len(arr) != 0:
-            num = arr.pop()
+            num = arr.pop(0)
+            print(num)
             final.append(num)
-            x = self.get_adjacency_list[num]
+            x = self.get_adjacency_list()[num]
             if x == None:
                 continue
             for edge in x:
-                num = egde[0]
+                num = edge[0]
+                print("edge nums", num)
                 node = self.find_node(num)
                 if not node.visited:
                     node.visited = True
@@ -202,7 +204,7 @@ class Graph(object):
 
     def bfs_names(self, start_node_num):
         """Return the results of bfs with numbers converted to names."""
-        del ret_list[0: len(ret_list)]
+        # del ret_list[0: len(ret_list)]
         return [self.node_names[num] for num in self.bfs(start_node_num)]
 
 
@@ -227,4 +229,4 @@ graph.insert_edge(932, 4, 2)    # Berlin <-> London
 graph.insert_edge(9471, 2, 5)   # London <-> Sao Paolo
 graph.insert_edge(9471, 5, 2)   # Sao Paolo <-> London
 
-print(graph.dfs_names(2))
+print(graph.bfs(2))
