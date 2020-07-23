@@ -145,13 +145,18 @@ class Graph(object):
         RETURN: a list of the traversed node values (integers).
         """
         x = self.get_adjacency_list()[start_node.value]
+        start_node.visited = True
         if x == None:
             return []
-        arr = []
-        arr.append(x)
-        new_num = x[0][0]
-        new_node = self.find_node(new_num)
-        return arr + dfs_helper(new_node)
+        arr = [start_node.value]
+        print(arr)
+        for edge in x:
+            num = edge[0]
+            print(num)
+            new_node = self.find_node(num)
+            if not new_node.visited:
+                arr = arr + self.dfs_helper(new_node)
+        return arr
 
     def dfs(self, start_node_num):
         """Outputs a list of numbers corresponding to the traversed nodes
@@ -180,3 +185,27 @@ class Graph(object):
         """Return the results of bfs with numbers converted to names."""
         del ret_list[0: len(ret_list)]
         return [self.node_names[num] for num in self.bfs(start_node_num)]
+
+
+graph = Graph()
+graph.set_node_names(('Mountain View', 'San Francisco',
+                      'London', 'Shanghai', 'Berlin', 'Sao Paolo', 'Bangalore'))
+
+graph.insert_edge(51, 0, 1)     # MV <-> SF
+graph.insert_edge(51, 1, 0)     # SF <-> MV
+graph.insert_edge(9950, 0, 3)   # MV <-> Shanghai
+graph.insert_edge(9950, 3, 0)   # Shanghai <-> MV
+graph.insert_edge(10375, 0, 5)  # MV <-> Sao Paolo
+graph.insert_edge(10375, 5, 0)  # Sao Paolo <-> MV
+graph.insert_edge(9900, 1, 3)   # SF <-> Shanghai
+graph.insert_edge(9900, 3, 1)   # Shanghai <-> SF
+graph.insert_edge(9130, 1, 4)   # SF <-> Berlin
+graph.insert_edge(9130, 4, 1)   # Berlin <-> SF
+graph.insert_edge(9217, 2, 3)   # London <-> Shanghai
+graph.insert_edge(9217, 3, 2)   # Shanghai <-> London
+graph.insert_edge(932, 2, 4)    # London <-> Berlin
+graph.insert_edge(932, 4, 2)    # Berlin <-> London
+graph.insert_edge(9471, 2, 5)   # London <-> Sao Paolo
+graph.insert_edge(9471, 5, 2)   # Sao Paolo <-> London
+
+print(graph.dfs_names(2))
