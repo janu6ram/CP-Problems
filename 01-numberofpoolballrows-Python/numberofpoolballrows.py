@@ -12,7 +12,8 @@ def fun_numberofpoolballrows(balls):
     b = 1
     c = -2 * balls
     det = (b*b) - (4 * a * c)
-    rows = -b + (math.sqrt(det))/2*a
+    print(det)
+    rows = (-b + math.sqrt(det))/2*a
     print(rows)
 
 
