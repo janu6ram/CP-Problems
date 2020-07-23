@@ -12,8 +12,8 @@ import math
 
 def fun_nth_smithnumber(n):
     smith_numbers = []
+    i = 4
     while len(smith_numbers) != n+1:
-        i = 4
         if (not prime_number(i)) and factors_sum(i) == digit_sum(i):
             smith_numbers.append(i)
         i += 1
