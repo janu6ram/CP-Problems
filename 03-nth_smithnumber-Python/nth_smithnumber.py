@@ -40,11 +40,14 @@ def factors_sum(n):
     add = 0
     while i < n:
         if prime_number(i) and n % i == 0:
-            add += i
+            z = n
+            while z > 1:
+                if z % i == 0:
+                    add += i
+                    z = z/i
+                else:
+                    break
         i += 1
-    x = int(math.sqrt(n))
-    if x * x == n:
-        add += x
     add = digit_sum(add)
     return add
 
@@ -58,4 +61,4 @@ def digit_sum(n):
     return add
 
 
-print(fun_nth_smithnumber(1))
+print(fun_nth_smithnumber(0))
