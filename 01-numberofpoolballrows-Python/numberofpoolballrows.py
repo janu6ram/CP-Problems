@@ -6,15 +6,16 @@
 # numberOfPoolBallRows(7) returns 4 (since the 4th row must have a single ball in it).
 import math
 
+# sum of n terms is n(n+1)/2. so  equate n(n+1) = 2 * balls then
+# we get quadratic equation will be n**2 + n - 2(balls) =0
+
 
 def fun_numberofpoolballrows(balls):
-    a = 1
-    b = 1
     c = -2 * balls
-    det = (b*b) - (4 * a * c)
-    print(det)
-    rows = (-b + math.sqrt(det))/2*a
-    print(rows)
+    det = (1) - (4 * c)
+    rows = (-1 + math.sqrt(det))/2
+    # print(math.ceil(rows))
+    return math.ceil(rows)
 
 
-fun_numberofpoolballrows(7)
+fun_numberofpoolballrows(0)
