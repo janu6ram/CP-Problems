@@ -12,7 +12,7 @@ def nthwithproperty309(n):
         power = pow(i, 5)
         if check_digits(power):
             print(power)
-            list1.append(power)
+            list1.append(i)
         i += 1
     return list1[n]
 
