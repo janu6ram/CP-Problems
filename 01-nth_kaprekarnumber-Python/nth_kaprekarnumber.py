@@ -41,4 +41,4 @@ def check_sum(n):
         p += 1
 
 
-fun_nth_kaprekarnumber(2)
+fun_nth_kaprekarnumber(3)
