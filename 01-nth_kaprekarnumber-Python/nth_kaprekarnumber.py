@@ -43,4 +43,4 @@ def check_sum(n):
         p += 1
 
 
-print(fun_nth_kaprekarnumber(4))
+print(fun_nth_kaprekarnumber(5))
