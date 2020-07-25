@@ -34,4 +34,4 @@ def check_digits(n):
         return False
 
 
-print(nthwithproperty309(100))
+print(nthwithproperty309(1))
