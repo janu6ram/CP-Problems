@@ -23,10 +23,10 @@ def longestdigitrun(n):
             count = 1
         if count >= max1 and rem1 <= prev:
             max1 = count
-            prev = rem2
+            prev = rem1
 
     print(max1, prev)
     return prev
 
 
-longestdigitrun(-677886)
+longestdigitrun(12345)
