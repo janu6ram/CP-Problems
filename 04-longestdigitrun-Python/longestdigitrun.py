@@ -19,11 +19,12 @@ def longestdigitrun(n):
         rem2 = n % 10
         if rem1 == rem2:
             count += 1
-            if count >= max1 and rem1 <= prev:
-                max1 = count
-                prev = rem1
         else:
             count = 1
+        if count >= max1 and rem1 <= prev:
+            max1 = count
+            prev = rem2
+
     print(max1, prev)
     return prev
 
