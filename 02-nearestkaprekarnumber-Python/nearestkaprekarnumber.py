@@ -35,4 +35,4 @@ def check_kap(n):
             return True
         p += 1
     return False
-fun_nearestkaprekarnumber(51)
+print(fun_nearestkaprekarnumber(51))
