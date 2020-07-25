@@ -25,8 +25,11 @@ def truncate_prime(n):
     while digits != 0:
         n %= 10**digits
         digits -= 1
+        if int(math.log10(n)) != digits:
+            return False
         if not prime(n):
             return False
+
     return True
 
 
