@@ -28,7 +28,7 @@ def check_sum(n, i):
         rem = n % 10
         n //= 10
         right += rem*(10**p)
-        if n + right == i:
+        if n + right == i and n != 0 and right != 0:
             return True
         p += 1
     return False
