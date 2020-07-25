@@ -19,3 +19,16 @@ def fun_nth_kaprekarnumber(n):
             kaprekars.append(i)
         i += 1
     return kaprekars[n]
+
+
+def check_sum(n):
+    if n < 10:
+        return n
+    right = 0
+    p = 0
+    while n != 0:
+        rem = n % 10
+        n //= 10
+        right += rem*(10**p)
+        if (1 + int(math.log10(n))) == (1 + int(math.log10(right))):
+            return right + n
