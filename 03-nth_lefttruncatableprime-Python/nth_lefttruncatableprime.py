@@ -43,3 +43,6 @@ def prime(n):
             return False
         i += 6
     return True
+
+
+print(fun_nth_lefttruncatableprime(5))
