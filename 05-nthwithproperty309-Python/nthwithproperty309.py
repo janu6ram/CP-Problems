@@ -30,3 +30,6 @@ def check_digits(n):
         return True
     else:
         return False
+
+
+nthwithproperty309(0)
