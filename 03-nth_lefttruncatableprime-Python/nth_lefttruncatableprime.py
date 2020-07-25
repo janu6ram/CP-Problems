@@ -22,11 +22,11 @@ def fun_nth_lefttruncatableprime(n):
 
 def truncate_prime(n):
     digits = int(math.log10(n))
-    while digits >= 0:
-        if not prime(n):
-            return False
+    while digits != 0:
         n %= 10**digits
         digits -= 1
+        if not prime(n):
+            return False
     return True
 
 
@@ -45,4 +45,4 @@ def prime(n):
     return True
 
 
-print(fun_nth_lefttruncatableprime(20))
+print(fun_nth_lefttruncatableprime(10))
