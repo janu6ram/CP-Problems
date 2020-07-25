@@ -22,7 +22,7 @@ def fun_nth_kaprekarnumber(n):
 
 
 def check_sum(n):
-    if n < 10:
+    if (1 + int(math.log10(n))) % 2 != 0:
         return n
     right = 0
     p = 0
@@ -30,6 +30,15 @@ def check_sum(n):
         rem = n % 10
         n //= 10
         right += rem*(10**p)
-        if (1 + int(math.log10(n))) == (1 + int(math.log10(right))):
+        if right == 0:
+            p += 1
+            continue
+        print(n, right)
+        ll = (1 + int(math.log10(n)))
+        rl = (1 + int(math.log10(right)))
+        if ll <= rl:
             return right + n
         p += 1
+
+
+fun_nth_kaprekarnumber(2)
