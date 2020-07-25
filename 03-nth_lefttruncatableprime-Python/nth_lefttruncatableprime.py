@@ -45,4 +45,4 @@ def prime(n):
     return True
 
 
-print(fun_nth_lefttruncatableprime(10))
+print(fun_nth_lefttruncatableprime(15))
