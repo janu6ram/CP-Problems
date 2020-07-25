@@ -11,8 +11,10 @@ def nthwithproperty309(n):
     while len(list1) != n+1:
         power = pow(i, 5)
         if check_digits(power):
+            print(power)
             list1.append(power)
         i += 1
+    return list1[n]
 
 
 def check_digits(n):
@@ -32,4 +34,4 @@ def check_digits(n):
         return False
 
 
-nthwithproperty309(0)
+print(nthwithproperty309(1))
