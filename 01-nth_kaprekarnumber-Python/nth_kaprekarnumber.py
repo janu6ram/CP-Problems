@@ -36,9 +36,11 @@ def check_sum(n):
         print(n, right)
         ll = (1 + int(math.log10(n)))
         rl = (1 + int(math.log10(right)))
+        if rem == 0:
+            rl += 1
         if ll <= rl:
             return right + n
         p += 1
 
 
-print(fun_nth_kaprekarnumber(3))
+print(fun_nth_kaprekarnumber(4))
