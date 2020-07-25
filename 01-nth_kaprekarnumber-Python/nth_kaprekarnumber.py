@@ -32,3 +32,4 @@ def check_sum(n):
         right += rem*(10**p)
         if (1 + int(math.log10(n))) == (1 + int(math.log10(right))):
             return right + n
+        p += 1
