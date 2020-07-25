@@ -24,7 +24,6 @@ def fun_nth_kaprekarnumber(n):
 def check_sum(n, i):
     if n < 10 and n == i:
         return True
-
     right = 0
     p = 0
     while n != 0:
