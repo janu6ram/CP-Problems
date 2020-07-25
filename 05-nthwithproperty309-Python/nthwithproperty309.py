@@ -7,3 +7,26 @@
 def nthwithproperty309(n):
     # Your code goes here
     list1 = []
+    i = 309
+    while len(list1) != n+1:
+        power = pow(i, 5)
+        if check_digits(power):
+            list1.append(power)
+        i += 1
+
+
+def check_digits(n):
+    dict1 = {}
+    count = 0
+    while n != 0:
+        rem = n % 10
+        n //= 10
+        if rem not in dict1:
+            dict1[rem] = 1
+            count += 1
+        else:
+            dict1[rem] += 1
+    if count == 10:
+        return True
+    else:
+        return False
