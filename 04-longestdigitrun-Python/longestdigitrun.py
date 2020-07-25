@@ -11,7 +11,7 @@ def longestdigitrun(n):
     # Your code goes here
     count = 1
     max = 0
-    prev = sys.maxint
+    prev = sys.maxsize
     while n != 0:
         rem1 = n % 10
         n //= 10
@@ -23,3 +23,8 @@ def longestdigitrun(n):
                 prev = rem1
         else:
             count = 1
+    print(count)
+    return count
+
+
+longestdigitrun(117773732)
