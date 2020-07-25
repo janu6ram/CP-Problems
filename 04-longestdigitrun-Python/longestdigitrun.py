@@ -21,13 +21,13 @@ def longestdigitrun(n):
             count += 1
         else:
             count = 1
-        print(rem1, rem2, count)
-        if count >= max1 and rem1 <= prev:
-            print(count, max1, rem1, rem2)
+        # print(rem1, rem2, count, max1, prev)
+        if count > max1 or (count == max1 and rem1 <= prev):
+            # print(count, max1, rem1, rem2)
             max1 = count
             prev = rem1
 
-    print(max1, prev)
+    # print(max1, prev)
     return prev
 
 
