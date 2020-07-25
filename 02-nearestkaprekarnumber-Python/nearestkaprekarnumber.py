@@ -9,8 +9,8 @@
 # Hint: one way to solve this is to start at n and grow in each direction until you find a Kaprekar number.
 
 
-
 import math
+
 
 def fun_nearestkaprekarnumber(n):
     i = 0
@@ -21,9 +21,10 @@ def fun_nearestkaprekarnumber(n):
             return n + i
         i += 1
 
+
 def check_kap(n):
-    square = pow(n,2)
-    if square < 10 and  square == n:
+    square = pow(n, 2)
+    if square < 10 and square == n:
         return True
     right = 0
     p = 0
@@ -35,4 +36,6 @@ def check_kap(n):
             return True
         p += 1
     return False
-print(fun_nearestkaprekarnumber(51))
+
+
+print(fun_nearestkaprekarnumber(50))
