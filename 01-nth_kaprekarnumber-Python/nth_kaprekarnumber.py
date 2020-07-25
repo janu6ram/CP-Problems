@@ -15,32 +15,23 @@ def fun_nth_kaprekarnumber(n):
     i = 1
     while len(kaprekars) != n+1:
         square = pow(i, 2)
-        if check_sum(square) == i:
+        if check_sum(square, i):
             kaprekars.append(i)
         i += 1
     return kaprekars[n]
 
 
-def check_sum(n):
-    if (1 + int(math.log10(n))) % 2 != 0:
-        return n
+def check_sum(n, i):
     right = 0
     p = 0
     while n != 0:
         rem = n % 10
         n //= 10
         right += rem*(10**p)
-        if right == 0:
-            p += 1
-            continue
-        print(n, right)
-        ll = (1 + int(math.log10(n)))
-        rl = (1 + int(math.log10(right)))
-        if rem == 0:
-            rl += 1
-        if ll <= rl:
-            return right + n
+        if n + right == i:
+            return True
         p += 1
+    return False
 
 
-print(fun_nth_kaprekarnumber(5))
+print(fun_nth_kaprekarnumber(20))
