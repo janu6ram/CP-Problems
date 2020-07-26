@@ -14,7 +14,6 @@ def nthcircularprime(n):
         if isPrime(i) and circular_prime(i):
             circular_primes.append(i)
         i += 2
-    # print(circular_primes)
     return circular_primes[n-1]
 
 
@@ -60,6 +59,3 @@ def isPrime(n):
             return False
         i += 6
     return True
-
-
-print(nthcircularprime(47))
