@@ -15,12 +15,19 @@ def fun_nth_uglynumber(n):
 
 
 def prime_factors(n):
+    flag = False
+    if n == 1:
+        return True
     for i in range(2, n, 1):
         while n % i == 0:
             if not is_prime(i):
                 return False
+            if is_prime(i):
+                flag = True
             n //= i
-    return True
+    if flag:
+        return True
+    return False
 
 
 def is_prime(n):
