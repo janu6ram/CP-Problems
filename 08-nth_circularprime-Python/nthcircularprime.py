@@ -10,9 +10,10 @@ circular_primes = [2]
 
 def nthcircularprime(n):
     # Your code goes here
+    i = 3
     while len(circular_primes) != n:
-        i = 3
         if isPrime(i) and circular_prime(i):
+            print(i)
             circular_primes.append(i)
         i += 2
     print(circular_primes)
@@ -20,12 +21,32 @@ def nthcircularprime(n):
 
 
 def circular_prime(n):
+    repeat, count = check_num(n)
+    if repeat:
+        return False
+    p = count-1
+    num = n
+    while isPrime(num):
+        rem = num % 10
+        num //= 10
+        num = rem*(10**p) + num
+        if num == n:
+            return True
+    return False
+
+
+def check_num(n):
+    count = 0
+    repeat = 0
     while n != 0:
         rem = n % 10
+        if rem == 1:
+            repeat += 1
         n //= 10
-        if not isPrime(rem):
-            return False
-    return True
+        count += 1
+    if count == repeat:
+        return True, count
+    return False, count
 
 
 def isPrime(n):
