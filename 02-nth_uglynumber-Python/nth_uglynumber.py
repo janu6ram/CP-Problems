@@ -10,11 +10,12 @@ def fun_nth_uglynumber(n):
         if prime_factors(i):
             ugly_numbers.append(i)
         i += 1
+    print(ugly_numbers)
     return ugly_numbers[n]
 
 
 def prime_factors(n):
-    for i in range(2, n+1, 1):
+    for i in range(2, n, 1):
         while n % i == 0:
             if not is_prime(i):
                 return False
@@ -37,4 +38,4 @@ def is_prime(n):
     return True
 
 
-fun_nth_uglynumber(10)
+print(fun_nth_uglynumber(10))
