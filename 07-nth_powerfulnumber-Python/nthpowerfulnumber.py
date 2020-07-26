@@ -22,17 +22,17 @@ def nthpowerfulnumber(n):
 
 
 def prime_factors(n):
-    factors = set([])
+    factors = set([1])
     while n % 2 == 0:
         factors.add(2)
         n //= 2
-    for i in range(3, int(math.sqrt(n))+1, 2):
+    for i in range(3, n+1, 2):
         while n % i == 0:
-            factors.add(2)
+            factors.add(i)
             n //= i
     if n > 2:
         factors.add(2)
     return factors
 
 
-print(prime_factors(576))
+print(prime_factors(8))
