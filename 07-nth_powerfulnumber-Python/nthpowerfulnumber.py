@@ -18,7 +18,12 @@ def nthpowerfulnumber(n):
     return powerful[n]
 
 
-# def check_factors
+def check_factors(n):
+    factors = prime_factors(n)
+    for i in factors:
+        if n % (i**2) != 0:
+            return False
+    return True
 
 
 def prime_factors(n):
