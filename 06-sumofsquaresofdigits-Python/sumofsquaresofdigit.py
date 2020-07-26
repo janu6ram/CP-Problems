@@ -7,3 +7,8 @@
 def sumofsquaresofdigit(n):
     # Your code goes here
     add = 0
+    while n != 0:
+        rem = n % 10
+        n //= 10
+        add += rem**2
+    return add
