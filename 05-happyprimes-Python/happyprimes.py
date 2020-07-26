@@ -46,4 +46,4 @@ def ishappyprimenumber(n):
             return False
 
 
-print(ishappyprimenumber(23))
+print(ishappyprimenumber(833))
