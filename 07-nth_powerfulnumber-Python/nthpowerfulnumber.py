@@ -40,4 +40,4 @@ def prime_factors(n):
     return factors
 
 
-print(prime_factors(8))
+print(nthpowerfulnumber(53))
