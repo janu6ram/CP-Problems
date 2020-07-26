@@ -8,8 +8,11 @@ def nthpronicnumber(n):
     pronic_numbers = []
     i = 0
     while len(pronic_numbers) != n+1:
-        pronic_numbers.append((i * i+1))
+        num = (i * i+1)
+        print(num)
+        pronic_numbers.append(num)
         i += 1
+    print(pronic_numbers)
     return pronic_numbers[n]
 
 
