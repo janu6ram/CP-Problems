@@ -11,7 +11,7 @@ def nthcircularprime(n):
     circular_primes = [2]
     i = 3
     while len(circular_primes) != n:
-        if isPrime(i) and circular_prime(i):
+        if is_prime(i) and circular_prime(i):
             circular_primes.append(i)
         i += 2
     return circular_primes[n-1]
@@ -23,7 +23,7 @@ def circular_prime(n):
         return False
     p = count-1
     num = n
-    while isPrime(num):
+    while is_prime(num):
         rem = num % 10
         num //= 10
         num = rem*(10**p) + num
@@ -46,7 +46,7 @@ def check_num(n):
     return False, count
 
 
-def isPrime(n):
+def is_prime(n):
     if n <= 1:
         return False
     if n <= 3:
