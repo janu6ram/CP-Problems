@@ -59,3 +59,6 @@ def is_prime(n):
             return False
         i += 6
     return True
+
+
+print(nthcircularprime(47))
