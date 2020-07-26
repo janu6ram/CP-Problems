@@ -11,3 +11,6 @@ def nthpronicnumber(n):
         pronic_numbers.append(i * i+1)
         i += 1
     return pronic_numbers[n]
+
+
+print(nthpronicnumber(0))
