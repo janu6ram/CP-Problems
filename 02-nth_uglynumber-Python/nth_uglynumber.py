@@ -35,3 +35,6 @@ def is_prime(n):
             return False
         i += 6
     return True
+
+
+fun_nth_uglynumber(10)
