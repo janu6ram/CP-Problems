@@ -3,20 +3,20 @@
 // # the sum of its digits is also prime. For example, 113 is prime and 1+1+3==5 and 5
 // # is also prime, so 113 is an Additive Prime. fun_nth_additive_prime(0) returns 2
 
-
+import java.util.*;
 class nthtenlyprime {
 	public int fun_nthtenlyprime(int n){
 		int[] tenly_primes = new int[n+1];
 		int i = 2;
 		int pos = 0;
-		while (tenly_primes.length != n+1) {
-			if (isPrime(i) && sumPrime(i)){
+		while (pos < tenly_primes.length) {
+			if (isPrime(i) && sumTen(i)){
 				tenly_primes[pos] = i;
 				pos++;
 			}
 			i++;
 		}
-		System.out.println(tenly_primes);
+		System.out.println(Arrays.toString(tenly_primes));
 		return tenly_primes[n];
 
 
@@ -40,14 +40,14 @@ class nthtenlyprime {
 		}
 		return true;
 	}
-	public boolean sumPrime(int num){
+	public boolean sumTen(int num){
 		int sum = 0;
 		while(num != 0){
 			int rem = num%10;
 			num = num/10;
 			sum += rem;
 		}
-		return isPrime(sum);
+		return sum == 10;
 	}
 
 }
