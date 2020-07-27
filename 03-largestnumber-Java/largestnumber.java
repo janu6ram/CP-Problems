@@ -10,11 +10,12 @@
 
 class largestnumber {
 	public int fun_largestnumber(String s){
-		String[] arr = s.split("");
+		String[] arr = s.split("(?<=\\D)(?=\\d)");
 		int max = 0;
 		for(int i = 0; i < arr.length;i++){
 			try{
 				int num = Integer.parseInt(arr[i]);
+				System.out.println(num);
 				if (num >  max) {
 					max = num;
 				}
