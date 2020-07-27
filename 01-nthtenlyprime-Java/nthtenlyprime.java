@@ -16,6 +16,7 @@ class nthtenlyprime {
 			}
 			i++;
 		}
+		System.out.println(tenly_primes);
 		return tenly_primes[n];
 
 
