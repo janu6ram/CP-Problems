@@ -13,10 +13,11 @@ def nthlychrelnumbers(n):
         if lychrel(i):
             lychrel_numbers.append(i)
         i += 1
+
     return lychrel_numbers[n-1]
 
 
-def lycheral(n):
+def lychrel(n):
     i = 0
     while not palindrome(n):
         n += reverse(n)
@@ -28,7 +29,7 @@ def lycheral(n):
 
 def palindrome(n):
     rev = reverse(n)
-    print(n, rev)
+    # print(n, rev)
     if n == rev:
         return True
     else:
@@ -41,8 +42,8 @@ def reverse(n):
         rem = n % 10
         n //= 10
         rev = 10*rev + rem
-    print(rev)
+    # print(rev)
     return rev
 
 
-print(lycheral(196))
+print(nthlychrelnumbers(1))
