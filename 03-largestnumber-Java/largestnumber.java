@@ -25,8 +25,11 @@ class largestnumber {
 		}
 		int max = 0;
 		for(int x : stack){
-			System.out.println("hai"+ x);
+			if (x > max){
+				max = x;
+			}
 		}
+
 		return max;
 
 
