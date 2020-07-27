@@ -7,21 +7,25 @@
 // #     	largestNumber("One person ate two hot dogs!")
 // # returns None (the value None, not the string "None").
 
-
+import java.util.*;
 class largestnumber {
 	public int fun_largestnumber(String s){
-		String[] arr = s.split("(?<=\\D)(?=\\d)");
-		int max = 0;
-		for(int i = 0; i < arr.length;i++){
-			try{
-				int num = Integer.parseInt(arr[i]);
-				System.out.println(num);
-				if (num >  max) {
-					max = num;
+		int num = 0;
+		Stack<Integer> stack = new Stack<Integer>();
+		for(int i = 0; i < s.length();i++){
+			char c = s.charAt(i);
+			if(Character.isDigit(c)){
+				num = num *10 + Integer.parseInt(c+"");
+			}else{
+				if (num != 0){
+					stack.push(num);
 				}
-			}catch(NumberFormatException e){
-
+				num = 0;
 			}
+		}
+		int max = 0;
+		for(int x : stack){
+			System.out.println("hai"+ x);
 		}
 		return max;
 
