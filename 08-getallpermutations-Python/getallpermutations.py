@@ -13,19 +13,19 @@ def getallpermutations(x):
     for i in range(factorial):
         dup = chars.copy()
         n = 1
-        list1 = [0] * 3
+        list1 = [0] * length
         while i != 0:
             rem = i % n
+            list1[length - n] = rem
             i //= n
             n += 1
-            list1.pop(-1)
-            list1.insert(0, rem)
-        tup = []
         print(list1, dup)
+        tup = []
         for i in list1:
             tup.append(dup.pop(i))
-        permutations.append(tup)
+        permutations.append(tuple(tup))
     print(permutations)
+    return permutations
 
 
 getallpermutations("abc")
