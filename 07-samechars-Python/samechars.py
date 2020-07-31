@@ -11,7 +11,9 @@ def samechars(s1, s2):
     l2 = len(s2)
     if l1 >= l2:
         min_str = s2
-    for i in s2:
+    else:
+        min_str = s1
+    for i in min_str:
         if i not in s1:
             return False
-        return True
+    return True
