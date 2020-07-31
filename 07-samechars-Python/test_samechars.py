@@ -5,7 +5,7 @@ import sys
 sys.path.append(os.getcwd())
 
 
-@pytest.mark.parametrize('x,y, result', [
+@pytest.mark.parametrize('x, result', [
     (("abcabcabc", "cba"), True),
     (("abcabcabc", "cbad"), False),
     (("abcabcabc", "cBa"), False),
